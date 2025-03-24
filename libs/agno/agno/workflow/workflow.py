@@ -429,8 +429,7 @@ class Workflow:
             self.extra_data = session.extra_data
 
         if session.memory is not None:
-            if self.memory is None:
-                self.memory = WorkflowMemory()
+            self.initialize_memory()
 
             try:
                 if "runs" in session.memory:
