@@ -115,6 +115,8 @@ class Workflow:
 
         self.workflow_session: Optional[WorkflowSession] = None
 
+        self.set_storage_mode()
+
         # Private attributes to store the run method and its parameters
         # The run function provided by the subclass
         self._subclass_run: Optional[Callable] = None
